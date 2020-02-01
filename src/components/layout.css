@@ -185,7 +185,6 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -200,14 +199,14 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1;
+  font-variant-ligatures: none;
+  text-rendering: optimizelegibility;
+  text-shadow: rgba(0, 0, 0, 0.01) 0px 0px 1px;
+  background: white;
 }
 img {
   max-width: 100%;
@@ -619,4 +618,80 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding-top: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #869ab8;
+  font-weight: 400;
+  transition: .2s all ease-in-out;
+}
+nav a:hover {
+  opacity: .5;
+}
+.siteName {
+  grid-column: 1;
+  padding: 1rem;
+  color: #6d2f9c;
+  font-weight: 700;
+}
+.siteMenuLinks {
+  grid-column: 2;
+  align-self: center;
+}
+.siteMenuLinks a {
+  padding: 10px 0;
+  margin-left: 15px;
+  letter-spacing: 0.5px;
+}
+.burger-menu {
+  grid-column: 1;
+  align-self: center;
+  margin-left: 20px;
+}
+#nav-toggle, .burger-menu {
+  display: none;
+}
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.mainLeft {
+  align-self: center;
+}
+.mainRight {
+  align-self: center;
+  max-width: 420px;
+}
+@media only screen and (max-width: 620px) {
+  .burger-menu {
+    display: inline-block;
+    text-align: center;
+  }
+  .siteMenuLinks {
+    display: none;
+  }
+  #nav-toggle:checked ~ .siteMenuLinks {
+    display: grid;
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .siteMenuLinks a {
+    color: #333;;
+    text-align: center;
+  }
+  .siteName {
+    text-align: center;
+  }  
+}      
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10rem;
 }

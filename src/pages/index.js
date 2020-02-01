@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
@@ -8,13 +6,23 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="main">
+      <div class="mainLeft">
+        <h1>Welcome to <span style={{color:`#6d2f9c`}}>Gatsby</span>.</h1>
+        <p style={{
+          color: `#869ab8`
+        }}>
+          Build a beautiful and super fast website.
+        </p>
+        <button style={{ backgroundColor: `#6d2f9c`, padding: `1rem`, borderRadius: `.5rem`, color: `white`, border: `none`}}>Start Here</button>
+      </div> 
+      <div className="mainRight">
+        <Image />      
+      </div>   
     </div>
-    <Link to="/page-2/">Go to page 2</Link>
+
+    <hr />    
+  
   </Layout>
 )
 
